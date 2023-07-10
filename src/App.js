@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import { Route,Routes } from 'react-router-dom';
+import Homepage from './pages/Homepage';
+import Paralal from './pages/Paralal';
+import Marvel from './pages/Marvel';
+import Search from './pages/Search';
+import Watch from './pages/Watch';
+import TestData from './pages/TestData';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+        <Routes>
+          <Route path='/' element={<Homepage/>}/>
+          <Route path='/para' element={<Paralal/>}/>
+          <Route path='/Marvel' element={<Marvel/>}/>
+          <Route path='/search' element={<Search/>}/>
+          <Route path='/watch' element={<Watch/>}/>
+          <Route path='/developer' element={<TestData/>}/>
+
+
+
+
+        </Routes>
     </div>
   );
 }
